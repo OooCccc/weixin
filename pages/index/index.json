@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "inputSearch": "../../components/inputSearch/inputSearch",
+    "swiper": "../../components/swiper/swiper"
+  },
+  "navigationBarTitleText": "首页"
+
+}

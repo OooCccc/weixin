@@ -1,0 +1,32 @@
+<view class="cate">
+    <inputSearch></inputSearch>
+    <view class="cate_content">
+        <!-- 左侧滚动区域 -->
+        <scroll-view class="left" scroll-y="{{true}}">
+            <!-- 左侧菜单列表 -->
+            <view class="left_item {{index1===currentMenu ? 'active':' '}}" wx:for="{{leftMenuList}}" wx:for-index="index1" wx:for-item="item" wx:key="*this" bindtap='handleItemTap' data-index='{{index1}}'>
+                {{item}}
+            </view>
+        </scroll-view>
+        <!-- 右侧滚动区域 -->
+        <scroll-view class="right" scroll-top='{{scrollTop}}' scroll-y="{{true}}">
+            <view class="goods_group" wx:for="{{rightMenuList}}" wx:for-index="index2" wx:for-item="item2" wx:key="cat_id">
+                <!-- 分类大标题 -->
+                <view class="goods_title">
+                    <text class="cutline">/</text>
+                    {{item2.cat_name}}
+                    <text class="cutline">/</text>
+                </view>
+                <!-- 详细商品信息 -->
+                <view class="goods_list">
+                    <navigator class="goods" wx:for="{{item2.children}}" wx:for-index="index3" wx:for-item="item3" wx:key="cat_id" url="/pages/goods_list/index?cat_id={{item3.cat_id}}">
+                        <!-- 商品图片 -->
+                        <image mode="widthFix" src="{{item3.cat_icon}}" />
+                        <!-- 商品名称 -->
+                        <view class="goods_name">{{item3.cat_name}}</view>
+                    </navigator>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+</view>

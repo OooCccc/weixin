@@ -1,0 +1,32 @@
+<!-- index.wxml -->
+<!-- 搜索框组件 -->
+<view class="inputSearch_wrap">
+				<inputSearch></inputSearch>
+</view>
+<!-- 轮播图组件 -->
+<view class="swiper_warp">
+				<swiper swiperList="{{swiperList}}"></swiper>
+</view>
+<!-- 商品分类 -->
+<view class="category_warp">
+				<navigator open-type="switchTab" url="/pages/category/index" class="catrgory_item" wx:for="{{categoryList}}" wx:key="name">
+								<image mode="widthFix" src="{{item.image_src}}" />
+				</navigator>
+</view>
+<!-- 楼层 -->
+<view class="floor_warp">
+				<view class="floor_group" wx:for="{{floorList}}" wx:for-item="item1" wx:key="name">
+								<!-- 标题 -->
+								<view class='floor_title'>
+												<image mode="widthFix" src="{{item1.floor_title.image_src}}" />
+								</view>
+								<!-- 内容 -->
+								<view class='floor_list'>
+												<navigator url="/pages/goods_list/index?query=心动">
+																<view wx:for="{{item1.product_list}}" wx:for-item="item2" wx:for-index="index2" wx:key="name">
+																				<image mode="{{index2===0?'widthFix':'sacleFill'}}" class="floor_image" src="{{item2.image_src}}" />
+																</view>
+												</navigator>
+								</view>
+				</view>
+</view>

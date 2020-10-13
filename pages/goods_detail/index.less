@@ -1,0 +1,112 @@
+swiper{
+    height: 70vw;
+    text-align: center;
+    swiper-item{
+        image{
+            width: 70%;
+        }
+    }
+}
+
+.goods_info_wrap{
+    .goods_parice{
+        color: var(--themeColor);
+        font-size: 40rpx;
+        padding-left: 10rpx;
+    }
+    .goods_title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow:0 15rpx 10rpx #EEEEEE ;
+        .title{
+            display: flex;
+            justify-self: center;
+            align-self: center;
+            flex: 8; 
+            padding: 0 20rpx;
+            margin: 10rpx 0;
+            display: -webkit-box;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2 ;
+            font-size: 30rpx;
+        }
+        .collection{
+            flex: 2;
+            text-align: center;
+            color: #666;
+            border-left: 3rpx solid currentColor;
+            .iconfont{
+                font-size: 45rpx;
+            }
+        }
+    }
+}
+
+.photoinfo{
+    color: red;
+    font-size: 40rpx;
+    font-weight: 30rpx;
+    margin: 30rpx 0;
+}
+
+//工具栏样式
+.tools_wrap{
+    border-top: 2rpx solid #ccc;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    text-align: center;
+    height: 80rpx;
+    width: 100vw;
+    position: fixed;
+    bottom: 0rpx;
+    z-index: 99999;
+    background-color: #ffff;
+    .kefu{
+        flex:1 ;
+        font-size: 25rpx;
+        position: relative;
+        .b_kefu{
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: transparent;
+        }
+    }
+    .fenxiang{
+        flex: 1;  
+        font-size: 25rpx;     
+        position: relative;
+        .b_fenxaing{
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: transparent;
+        } 
+    }
+    .cart{
+        flex:1 ;
+        font-size: 25rpx;
+    }
+    .joinCart{
+        flex: 2;
+        background-color: #FFA500;
+        color: #ffffff;
+        height: 100%; 
+        line-height: 74rpx;
+
+    }
+    .buy{
+    flex:2 ;   
+    background-color: #EB4450;     
+    color: #ffffff;
+        height: 100%;
+        line-height: 80rpx;
+    }
+}

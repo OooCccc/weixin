@@ -1,0 +1,12 @@
+<!-- components/swiper/swiper.wxml -->
+<view class="swiper_wrap">
+				<swiper class="swiper" autoplay="{{true}}" interval="{{5000}}" duration="{{500}}" indicator-dots="{{true}}" indicator-color="#fff" indicator-active-color="#666">
+								<block wx:for="{{swiperList}}" wx:key="goods_id">
+												<navigator url="{{   item.navigator_url}}">
+																<swiper-item class="swiper-item">
+																				<image class="swiper-image" mode='widthFix' src="{{item.image_src}}" />
+																</swiper-item>
+												</navigator>
+								</block>
+				</swiper>
+</view>

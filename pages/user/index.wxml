@@ -1,0 +1,87 @@
+<view class="user_bg">
+    <block wx:if="{{userInfo}}">
+        <image class="image_bg" src="{{userInfo.avatarUrl}}" />
+        <view class="userInfo">
+            <image mode="widthFix" class="image_avatar" src="{{userInfo.avatarUrl}}" />
+            <view class="userName">{{userInfo.nickName}}</view>
+        </view>
+    </block>
+    <block wx:else>
+        <navigator url='/pages/login/index'>登陆</navigator>
+    </block>
+</view>
+<view class="user_center_wrap">
+    <view class="collection">
+        <navigator>
+            <view class='dianpu'>
+                <view class="dianpu_num">0</view>
+                <view class="dianpu_text">收藏的店铺</view>
+            </view>
+        </navigator>
+        <navigator url="/pages/collect/index">
+            <view class='goods'>
+                <view class="goods_num">{{collectionNum}}</view>
+                <view class="goods_text">收藏的商品</view>
+            </view>
+        </navigator>
+        <navigator>
+            <view class='guanhzu_num'>
+                <view class="guanhzu_num">0</view>
+                <view class="guanhzu_text">关注的商品</view>
+            </view>
+        </navigator>
+        <navigator>
+            <view class='zuji'>
+                <view class="zuji_num">0</view>
+                <view class="zuji_text">我的足迹</view>
+            </view>
+        </navigator>
+    </view>
+    <view class="order_wrap">
+        <view class="order_header_text">我的订单</view>
+        <view class="order_item_wrap">
+            <navigator url="/pages/order/index?type=1">
+                <view class="order_item_all">
+                    <view class="all_icon  iconfont icon-dingdan "></view>
+                    <view class="all_text">全部订单</view>
+                </view>
+            </navigator>
+            <navigator url="/pages/order/index?type=2">
+                <view class="order_item_daifu">
+                    <view class="daifu_icon iconfont icon-fukuantongzhi"></view>
+                    <view class="daifu_text">待付款</view>
+                </view>
+            </navigator>
+            <navigator url="/pages/order/index?type=3">
+                <view class="order_item_daishouhuo">
+                    <view class="daishouhuo_icon iconfont  icon-weibiaoti2fuzhi08"></view>
+                    <view class="daishouhuo_text">待收货</view>
+                </view>
+            </navigator>
+            <navigator>
+                <view class="order_item_tuikuan">
+                    <view class="tuikuan_icon iconfont icon-qian"></view>
+                    <view class="tuikuan_text">退款/退货</view>
+                </view>
+            </navigator>
+        </view>
+    </view>
+    <view class="aderss_wrap">
+        <navigator>收货地址管理</navigator>
+    </view>
+    <view class="kefu_wrap">
+        <button open-type="contact">
+            <view>联系客服</view>
+            <view>00-111-81008611</view>
+        </button>
+    </view>
+    <view class="suggest_wrap">
+        <button open-type="feedback">意见反馈</button>
+    </view>
+    <view class="about_wrap">
+        <button>关于我们</button>
+    </view>
+    <view class="tuijian_wrap">
+        <button open-type="share">把应用推荐给其他人</button>
+    </view>
+</view>

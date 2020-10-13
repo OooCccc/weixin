@@ -1,0 +1,41 @@
+<tab list="{{list}}" bindhandleChange='handleChange'></tab>
+<block>
+    <view wx:if="{{list[0].isActive}}">
+        <view class="order_wrap">
+            <view class="order" wx:for="{{orderList}}" wx:key="order_id">
+                <view class="num_wrap">
+                    <view class="num_text">订单编号</view>
+                    <view class="num">{{item.order_number}}</view>
+                </view>
+                <view class="price_wrap">
+                    <view class="price_text">订单价格</view>
+                    <view class="price">￥{{item.order_price}}</view>
+                </view>
+                <view class="date_wrap">
+                    <view class="date_text">订单日期</view>
+                    <view class="date">{{   item.time }}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view wx:elif="{{list[1].isActive}}">
+        <view class="order_wrap">
+            <view class="order" wx:for="{{orderList}}" wx:key="order_id">
+                <view class="num_wrap">
+                    <view class="num_text">订单编号</view>
+                    <view class="num">{{item.order_number}}</view>
+                </view>
+                <view class="price_wrap">
+                    <view class="price_text">订单价格</view>
+                    <view class="price">￥{{item.order_price}}</view>
+                </view>
+                <view class="date_wrap">
+                    <view class="date_text">订单日期</view>
+                    <view class="date">{{   item.time }}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view wx:elif="{{list[2].isActive}}">2</view>
+    <view wx:else="{{list[3].isActive}}">3</view>
+</block>

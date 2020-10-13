@@ -1,0 +1,53 @@
+<!-- 收货地址容器 -->
+<veiw class="address_info">
+    <view class="adress_wrap" bindtap='handleAddAdress' wx:if="{{!address.userName}}">
+        <view class="adress_b">添加收货地址</view>
+    </view>
+    <view class="adress" wx:else>
+        <view class="userName">收货人:{{address.userName}}</view>
+        <view class="userTel">{{address.telNumber}}</view>
+        <view class="adressInfo">
+            {{ address.provinceName + address.cityName + address.countyName + address.detailInfo }}
+        </view>
+    </view>
+</veiw>
+<view class="cart_text">购物车</view>
+<!-- 购物车列表 -->
+<view class="cart_wrap">
+    <block wx:if="{{carts.length!==0}}">
+        <view class="cart_item" wx:for="{{carts}}" wx:key="goods_id">
+            <checkbox-group class=".checkbox-group" data-id='{{item.goods_id}}' bindchange="handelChange">
+                <checkbox checked="{{item.checked}}" />
+            </checkbox-group>
+            <navigator>
+                <image mode="widthFix" src="{{item.goods_small_logo}}" />
+            </navigator>
+            <view class="cart_info">
+                <view class="title">{{item.goods_name}}</view>
+                <view class="cart_tools">
+                    <view class="price">￥{{item.goods_price}}</view>
+                    <view class="del" bindtap='handelDelGoods' data-index='{{index}}'>-</view>
+                    <view class="total">{{item.num}}</view>
+                    <view class="add" bindtap='handelAddGoods' data-index='{{index}}'>+</view>
+                </view>
+            </view>
+        </view>
+    </block>
+    <block wx:else>
+        <image mode="widthFix" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2987365702,273307145&fm=15&gp=0.jpg" />
+    </block>
+</view>
+<!-- 总价 -->
+<view class="sum_wrap">
+    <checkbox-group bindchange="handleAllSelect">
+        <checkbox checked="{{allChecked}}">全选</checkbox>
+    </checkbox-group>
+    <veiw class="sum_info">
+        <view class="sum">
+            <text>合计:</text>
+            ￥ {{totalPrice}}
+        </view>
+        <veiw class="tip">包含邮费</veiw>
+    </veiw>
+    <view class="buy" bindtap='handelApply'>结算({{totalNum}})</view>
+</view>

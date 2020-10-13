@@ -1,0 +1,13 @@
+<!--components/inputSearch/inputSearch.wxml-->
+<!-- 输入框 -->
+<view class="inputSearch-wrap">
+	<navigator
+	 class="inputSearch"
+	 url="../../pages/search/index"
+	 open-type="navigate"
+	>
+		<view class="iconfont icon-search"></view>
+		search
+	</navigator>
+</view>
+

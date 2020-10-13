@@ -1,0 +1,17 @@
+.tabs_title_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1rpx solid #666;
+}
+.tabs_title_wrap .tabs_title {
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  flex: 1;
+  background-color: #fff;
+}
+.active {
+  color: var(--themeColor);
+  border-bottom: 3rpx solid currentColor;
+}

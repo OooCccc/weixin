@@ -1,0 +1,9 @@
+<!-- components/tabs/tabs.wxml -->
+<view class="tabs_wrap">
+    <view class="tabs_title_wrap">
+        <view class="tabs_title  {{item.isActive ? 'active':''}}" bindtap='handleTapChange' data-index='{{index}}' wx:for="{{list}}" wx:key="*this">
+            {{item.value}}
+        </view>
+    </view>
+    <view class="tabs_content"></view>
+</view>

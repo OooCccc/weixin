@@ -1,0 +1,37 @@
+<!-- 收货地址容器 -->
+<veiw class="address_info">
+    <view class="adress">
+        <view class="userName">收货人:{{address.userName}}</view>
+        <view class="userTel">{{address.telNumber}}</view>
+        <view class="adressInfo">
+            {{ address.provinceName + address.cityName + address.countyName + address.detailInfo }}
+        </view>
+    </view>
+</veiw>
+<view class="cart_text">结算</view>
+<!-- 购物车列表 -->
+<view class="cart_wrap">
+    <view class="cart_item" wx:for="{{carts}}" wx:key="goods_id">
+        <navigator>
+            <image mode="widthFix" src="{{item.goods_small_logo}}" />
+        </navigator>
+        <view class="cart_info">
+            <view class="title">{{item.goods_name}}</view>
+            <view class="cart_tools">
+                <view class="price">￥{{item.goods_price}}</view>
+                <view class="total">X{{item.num}}</view>
+            </view>
+        </view>
+    </view>
+</view>
+<!-- 总价 -->
+<view class="sum_wrap">
+    <veiw class="sum_info">
+        <view class="sum">
+            <text>合计:</text>
+            ￥ {{totalPrice}}
+        </view>
+        <veiw class="tip">包含邮费</veiw>
+    </veiw>
+    <view class="buy" bindtap='handelApply'>支付({{totalNum}})</view>
+</view>

@@ -1,0 +1,57 @@
+page {
+  height: 100vh;
+}
+.cate_content {
+  height: 100vh;
+  display: flex;
+}
+.cate_content .left {
+  box-sizing: border-box;
+  flex: 3;
+  background-color: #EAE9E5;
+}
+.cate_content .left .left_item {
+  display: block;
+  width: 100%;
+  text-align: center;
+  line-height: 80rpx;
+  background-color: #F4F4F4;
+  margin-bottom: 5rpx;
+  font-size: 30rpx;
+}
+.cate_content .right {
+  flex: 7;
+}
+.cate_content .right .goods_group .goods_title {
+  height: 80rpx;
+  width: 100%;
+  text-align: center;
+  line-height: 80rpx;
+  color: #666;
+}
+.cate_content .right .goods_group .goods_title .cutline {
+  padding: 0 10rpx;
+}
+.cate_content .right .goods_group .goods_list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 25rpx;
+  margin-bottom: 10rpx ;
+  overflow: hidden;
+}
+.cate_content .right .goods_group .goods_list image {
+  width: 50%;
+}
+.cate_content .right .goods_group .goods_list .goods {
+  text-align: center;
+  width: 33.33%;
+  margin-bottom: 10rpx ;
+}
+.cate_content .right .goods_group .goods_list .goods_name {
+  text-align: center;
+}
+.active {
+  color: var(--themeColor);
+  border-left: 5rpx solid var(--themeColor);
+}

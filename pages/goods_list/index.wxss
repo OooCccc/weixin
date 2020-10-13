@@ -1,0 +1,32 @@
+.zonghe .goods_list {
+  display: flex;
+}
+.zonghe .goods_list .goods_left {
+  flex: 2;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.zonghe .goods_list .goods_left image {
+  width: 85%;
+}
+.zonghe .goods_list .goods_right {
+  flex: 3;
+}
+.zonghe .goods_list .goods_right .goods_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+.zonghe .goods_list .goods_right .goods_info .goods_name {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-size: 30rpx;
+}
+.zonghe .goods_list .goods_right .goods_info .goods_price {
+  color: var(--themeColor);
+  font-size: 40rpx;
+}

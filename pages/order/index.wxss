@@ -1,0 +1,24 @@
+.order_wrap {
+  padding: 20rpx;
+}
+
+.order {
+  width: 100%;
+  border-bottom: 2rpx solid #646964;
+  overflow: hidden;
+}
+.order > view {
+  width: 100%;
+  height: 50rpx;
+  margin: 15rpx 0;
+}
+.order > view view:nth-child(1) {
+  float: left;
+}
+.order > view view:nth-child(2) {
+  float: right;
+}
+.price {
+  color: var(--themeColor);
+  font-size: 43rpx;
+}

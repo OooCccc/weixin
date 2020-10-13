@@ -1,0 +1,23 @@
+/**app.wxss**/
+@import 'styles/iconfont';
+
+/* 城初始化样式 */
+page,view,text,swiper,swiper-item,image,navigator{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* 原生的css 和wxcss 都是支持 变量的 */
+page{
+    /* 主题颜色 */
+    --themeColor:#EB4450;
+    /* 全局字体大小  设计稿是375px的
+       1px =2rpx  
+       14px =28rpx
+    */
+    font-size: 28rpx;
+}
+image{
+    width: 100%;
+}
